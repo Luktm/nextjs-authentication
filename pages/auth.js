@@ -8,6 +8,7 @@ function AuthPage() {
   const router = useRouter();
 
   useEffect(() => {
+    // client side to verify session by leverage next-auth
     getSession().then((session) => {
       if (session) {
         router.replace('/');
